@@ -2,7 +2,7 @@
 %Ricardo Yahir Sanchez Mendoza 222834347
 
 % Modelado del sistema en Variables de estado
-clear all
+%clear all
 [t,z] = ode45(@Practica1FunOde,[0 200],[0 deg2rad(1) 0 0]);
 %       ode45(función, tiempo de muestreo, condiciones iniciales)
 
@@ -27,11 +27,11 @@ ylabel('Metros');
 
 
 subplot(2,1,2);
-plot(t,z(:,2)*(180/pi));
+plot(t,z(:,2));
 grid on
 title('angulo');
 xlabel('Time t');
-ylabel('grad');
+ylabel('rad');
 
 
 %{

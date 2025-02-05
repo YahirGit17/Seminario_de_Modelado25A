@@ -27,7 +27,7 @@ z3=z(3);
 z4=z(4);
 
 %% Calculos de matriz del sistema en las variables de estado[z3dy z4dy]
-m=1/( (Mc+Mp)*lp  + Mc*Mp*(lp^2)  + (Mp^2)*(lp^2)*(sin(z2))^2 );
+m=1/( (Mc+Mp)*lp  + Mc*Mp*(lp^2)  + (Mp^2)*(lp^2)*((sin(z2))^2) );
 A= [-(Ip+Mp*(lp^2))*Beq  ,  -(Ip*Mp*lp-(Mp^2)*(lp^3) )*sin(z2)*z4-Mp*lp*cos(z2)*Bp ; -Beq*Mp*lp*cos(z2), -(Mc+Mp)*Bp-(Mp^2)*(lp^2)*sin(z2)*cos(z2)*z4 ];
 z=[z3;z4];
 C=[(Ip+Mp *(lp^2) )*Fc+(Mp^2)*(lp^2)*g*cos(z2)*sin(z2) ; (Mc+Mp )*Mp*g*lp*sin(z2)+Fc*Mp*lp*cos(z2)];
